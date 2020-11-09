@@ -36,6 +36,9 @@
     "react-helmet": "^5.2.1"
   },
   "dependencies": {
-    "gatsby-image": "^2.0.41"
+    "gatsby-image": "^2.0.41",
+    "gatsby-source-drupal": "^3.6.2",
+    "gatsby-source-filesystem": "^2.4.2",
+    "gatsby-transformer-remark": "^2.9.2"
   }
 }

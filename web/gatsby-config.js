@@ -19,6 +19,21 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd
       }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/`,
+        name: 'md-files',
+        ignore: ['**/\.*'],
+      }
+    },
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-source-drupal',
+      options: {
+        baseUrl: 'site-url', //for example https://example.com
+      }
     }
   ]
 }
