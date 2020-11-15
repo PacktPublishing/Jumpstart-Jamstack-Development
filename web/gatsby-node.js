@@ -46,6 +46,40 @@ async function createBlogPostPages (graphql, actions) {
     })
 }
 
+async function createEventPages (graphql, actions) {
+  const {createPage} = actions
+  const result = await graphql(`
+    {
+      allSanityEvent {
+        edges {
+          node {
+            id
+            dateAndTime
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const eventEdges = (result.data.allSanityEvent || {}).edges || []
+
+  eventEdges
+    .forEach((edge, index) => {
+      const {id, dateAndTime} = edge.node
+      const dateSegment = format(dateAndTime, 'YYYY/MM')
+      const path = `/event/${dateSegment}/${id}/`
+      createPage({
+        path,
+        component:
+          require.resolve('./src/templates/event.js'),
+        context: {id}
+      })
+    })
+}
+
 exports.createPages = async ({graphql, actions}) => {
   await createBlogPostPages(graphql, actions)
+  await createEventPages(graphql, actions)
 }
