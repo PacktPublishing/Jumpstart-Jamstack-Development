@@ -29,6 +29,11 @@ export default {
       title: 'URL'
     },
     {
+      name: 'approved',
+      type: 'boolean',
+      title: 'Approved'
+    },
+    {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'

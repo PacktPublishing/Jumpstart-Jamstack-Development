@@ -61,6 +61,14 @@ export const query = graphql`
         }
       }
     }
+    venues: allSanityVenue {
+      edges {
+        node {
+          _id
+          name
+       }
+      }
+    }
   }
 `
 
@@ -81,6 +89,10 @@ const IndexPage = props => {
       .filter(filterOutDocsWithoutSlugs)
       .filter(filterOutDocsPublishedInTheFuture)
     : []
+  const venueNodes = (data || {}).venues
+    ? mapEdgesToNodes(data.venues)
+    : []
+
 
   if (!site) {
     throw new Error(
@@ -104,6 +116,60 @@ const IndexPage = props => {
             browseMoreHref='/archive/'
           />
         )}
+        <form name='propose-event' method='POST' data-netlify='true' >
+          <input type='hidden' name='form-name' value='propose-event' />
+          <div className='field'>
+            <label className='label'>Full name:
+              <input className='input' type='text' name='name'/>
+            </label>
+          </div>
+          <div className='field'>
+            <label className='label'>Email:
+              <input className='input' type='email' name='email'/>
+            </label>
+          </div>
+          <div className='field'>
+            <label className='label'>Event Title:
+              <input className='input' type='text' name='eventTitle'/>
+            </label>
+          </div>
+          <div className='field'>
+            <label className='label'>Date:
+              <input className='input' type='datetime-local' name='date'/>
+            </label>
+          </div>
+          <div className="field">
+            <label className="label">Venue:
+              <select className="select" name="venue">
+                {
+                  venueNodes && venueNodes.map((venue) => (
+                    <option id={venue._id}>{venue.name}</option>
+                  ))
+                }
+              </select>
+            </label>
+          </div>
+          <div className='field'>
+            <label className='label'>Virtual:
+              <input className='input' type='checkbox' name='virtual'/>
+            </label>
+          </div>
+          <div className='field'>
+            <label className='label'>Event url:
+              <input className='input' type='text' name='eventUrl'/>
+            </label>
+          </div>
+          <div className='field'>
+            <label className='label'>Message:
+              <textarea className='textarea' name='message'></textarea>
+            </label>
+          </div>
+          <div className='field'>
+            <button className='button' type='submit'>Send
+            </button>
+          </div>
+        </form>
+
       </Container>
     </Layout>
   )
