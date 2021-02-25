@@ -39,7 +39,7 @@ export const query = graphql`
       title
       description
       keywords
-    }
+    }  
     posts: allSanityPost(
       limit: 6
       sort: { fields: [publishedAt], order: DESC }
@@ -118,29 +118,29 @@ const IndexPage = props => {
         )}
         <form name='propose-event' method='POST' data-netlify='true' >
           <input type='hidden' name='form-name' value='propose-event' />
-          <div className='field'>
+          <div className='mt-10 block'>
             <label className='label'>Full name:
-              <input className='input' type='text' name='name'/>
+              <input className='form-input mt-1 block w-full' type='text' name='name'/>
             </label>
           </div>
-          <div className='field'>
+          <div className='mt-10 block'>
             <label className='label'>Email:
-              <input className='input' type='email' name='email'/>
+              <input className='form-input mt-1 block w-full' type='email' name='email'/>
             </label>
           </div>
-          <div className='field'>
+          <div className='mt-10 block'>
             <label className='label'>Event Title:
-              <input className='input' type='text' name='eventTitle'/>
+              <input className='form-input mt-1 block w-full' type='text' name='eventTitle'/>
             </label>
           </div>
-          <div className='field'>
+          <div className='mt-10 block'>
             <label className='label'>Date:
-              <input className='input' type='datetime-local' name='date'/>
+              <input className='form-input mt-1 block w-full' type='datetime-local' name='date'/>
             </label>
           </div>
-          <div className="field">
+          <div className="mt-10 block">
             <label className="label">Venue:
-              <select className="select" name="venue">
+              <select className="form-select mt-1 block w-full" name="venue">
                 {
                   venueNodes && venueNodes.map((venue) => (
                     <option id={venue._id}>{venue.name}</option>
@@ -149,22 +149,22 @@ const IndexPage = props => {
               </select>
             </label>
           </div>
-          <div className='field'>
+          <div className='mt-10 block'>
             <label className='label'>Virtual:
-              <input className='input' type='checkbox' name='virtual'/>
+              <input className='form-input mt-1 block w-full' type='checkbox' name='virtual'/>
             </label>
           </div>
-          <div className='field'>
+          <div className='mt-10 block'>
             <label className='label'>Event url:
-              <input className='input' type='text' name='eventUrl'/>
+              <input className='form-input mt-1 block w-full' type='text' name='eventUrl'/>
             </label>
           </div>
-          <div className='field'>
+          <div className='mt-10 block'>
             <label className='label'>Message:
-              <textarea className='textarea' name='message'></textarea>
+              <textarea className='form-textarea mt-1 block w-full' name='message'></textarea>
             </label>
           </div>
-          <div className='field'>
+          <div className='mt-10 block'>
             <button className='button' type='submit'>Send
             </button>
           </div>
