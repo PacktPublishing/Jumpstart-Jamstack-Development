@@ -28,12 +28,6 @@ module.exports = {
         ignore: ['**/\.*'],
       }
     },
-    'gatsby-transformer-remark',
-    {
-      resolve: 'gatsby-source-drupal',
-      options: {
-        baseUrl: 'site-url', //for example https://example.com
-      }
-    }
+    'gatsby-transformer-remark'
   ]
 }
