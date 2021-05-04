@@ -14,8 +14,8 @@ function Event (props) {
       <Container>
         <div className={styles.grid}>
           <div className={styles.mainContent}>
-            <h1 className={styles.name}>{name} @ {venue.name}</h1>
-            {_rawBody && <PortableText blocks={_rawBody} />}
+            <h1 className={styles.name}>{name} {venue && `@ ${venue.name}`}</h1>
+             {_rawBody && <PortableText blocks={_rawBody} />}
           </div>
         </div>
       </Container>

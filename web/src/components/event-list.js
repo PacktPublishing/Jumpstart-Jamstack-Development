@@ -13,7 +13,7 @@ function EventList (props) {
            return <div>
            <div className={`max-w-full shadow-sm mt-3 p-3 ${pastEvent ? 'bg-gray-600' : 'bg-gray-100'}`}>
               <Link to={`/event/${format(node.dateAndTime, 'YYYY/MM')}/${node.id}/`}>Event: <b>{node.name}</b></Link></div>
-              <div><i>{node.venue.name}</i> {node.virtual ? '*Virtual Event' : ''} {node.eventURL}</div>
+              <div><i>{node.venue && node.venue.name}</i> {node.virtual ? '*Virtual Event' : ''} {node.eventURL}</div>
               <div>{node.dateAndTime}</div>
             </div>
           })}
