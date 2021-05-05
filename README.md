@@ -71,6 +71,8 @@ With the following software and hardware list you can run all code files present
 
 At the time of writing, latest versions of Gatsby, React, Netlify and Sanity have been used. Any future updates for them will be pushed and updated.
 
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800203495_ColorImages.pdf).
+
 
 
 ### Related products <Other books you may enjoy>
