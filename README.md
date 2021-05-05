@@ -4,7 +4,7 @@
 
 This is the code repository for [Jumpstart Jamstack Development](https://www.packtpub.com/product/jumpstart-jamstack-development/9781800203495?utm_source=github&utm_medium=repository&utm_campaign=9781800203495), published by Packt.
 
-**Build and deploy modern websites and web apps using Gatsby, Netlify, and Sanity.io**
+**Build and deploy modern websites and web apps using Gatsby, Netlify, and Sanity**
 
 ## What is this book about?
 The Jamstack (JavaScript, API, and Markup) enables web developers to create and publish modern and maintainable websites and web apps focused on speed, security, and accessibility by using tools such as Gatsby, Sanity, and Netlify. Developers working with the Jamstack will be able to put their knowledge to good use with this practical guide to static site generation and content management. This Jamstack book takes a hands-on approach to implementation and related methodologies that will have you up and running with modern web development in no time.
