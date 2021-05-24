@@ -143,7 +143,7 @@ const IndexPage = props => {
               <select className="select" name="venue">
                 {
                   venueNodes && venueNodes.map((venue) => (
-                    <option id={venue._id}>{venue.name}</option>
+                    <option id={venue._id} value={venue._id}>{venue.name}</option>
                   ))
                 }
               </select>
