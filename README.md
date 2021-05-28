@@ -74,6 +74,13 @@ At the time of writing, latest versions of Gatsby, React, Netlify and Sanity hav
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800203495_ColorImages.pdf).
 
 
+## Errata
+* Page 126, Building and modifying template components section (line 2): **The first file that we need to work with is /web/src/gatsby-node.js** _should be_ **The first
+file that we need to work with is /web/gatsby-node.js**
+* Page 143 (line 1): **Open the event schema file located under studio/schemas/documents.index.js** _should be_ **Open the event schema file located under studio/schemas/documents/event.js**
+* Page 149, step 5 (code snippet line 5): **token: process.env.SANITY_STUDIO_ADD_EVENT** _should be_ **token: process.env.SANITY_STUDIO_PROPOSE_EVENT** 
+* Page 151, step 10 (code snippet line 5): **token: process.env.SANITY_STUDIO_ADD_EVENT** _should be_ **token: process.env.SANITY_STUDIO_PROPOSE_EVENT** 
+
 
 ### Related products <Other books you may enjoy>
 * Drupal 9 Module Development - Third Edition [[Packt]](https://www.packtpub.com/product/drupal-9-module-development-third-edition/9781800204621?utm_source=github&utm_medium=repository&utm_campaign=9781800204621) [[Amazon]](https://www.amazon.com/dp/1800204620)
