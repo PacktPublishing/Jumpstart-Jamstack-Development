@@ -95,8 +95,6 @@ has been a senior software developer, speaker, and open source enthusiast since 
 has been a software developer since 2007. He started in Palermo, Italy, and is now based in London, UK. He has developed software and web applications for government departments and many educational entities, including one of the major universities in the United Kingdom. He is focused on web applications, virtual assistant apps, and content management systems.
 
 
-## Other books by the authors
-* [Mastering Laravel](https://www.packtpub.com/product/mastering-laravel/9781785285028)
 
 
 
